@@ -19,9 +19,9 @@ public class ExcelInfoService {
         try {
             List<ExcelInfo> excelData = ExcelUploadService.getExcelInfoFromExcel
                     (file.getInputStream());
-            this.excelInfoRepository.saveAll(excelData);
-        } catch (Exception e) {
-            throw new IllegalArgumentException("file not valid");
+            excelInfoRepository.saveAll(excelData);
+        } catch (IOException e) {
+            throw new RuntimeException("file not valid");
         }
     }
 

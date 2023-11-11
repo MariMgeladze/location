@@ -1,17 +1,14 @@
 package softlab.homework.location.entities;
 
-
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Setter
 @Getter
-@AllArgsConstructor
-@Table(name = "vehicle_location")
-public class ExcelInfo {
+@Table(name = "Current Coordinates")
+public class CurrentCoordinates {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,14 +21,4 @@ public class ExcelInfo {
     private String number;
 
 
-    public ExcelInfo() {
-
-    }
-
-    public void setDistance(double distance) {
-    }
-
-    public double getDistance() {
-        return getDistance();
-    }
 }

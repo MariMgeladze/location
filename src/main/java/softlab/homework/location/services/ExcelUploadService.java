@@ -20,7 +20,7 @@ import java.util.List;
 public class ExcelUploadService {
     private final ExcelInfoRepository excelInfoRepository;
 
-    public static List<ExcelInfo> getExcelInfoFromExcel(InputStream inputStream) throws Exception{
+    public static List<ExcelInfo> getExcelInfoFromExcel(InputStream inputStream) {
         List<ExcelInfo> excelData = new ArrayList<>();
 
         try {
@@ -55,7 +55,6 @@ public class ExcelUploadService {
         }
         return excelData;
     }
-
 
 
 }
