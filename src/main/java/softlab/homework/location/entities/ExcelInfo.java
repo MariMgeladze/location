@@ -28,10 +28,7 @@ public class ExcelInfo {
 
     }
 
-    public void setDistance(double distance) {
-    }
 
-    public double getDistance() {
-        return getDistance();
-    }
+
+
 }

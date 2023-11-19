@@ -7,18 +7,18 @@ import lombok.Setter;
 @Entity
 @Setter
 @Getter
-@Table(name = "Current Coordinates")
+@Table(name = "current_coordinates")
 public class CurrentCoordinates {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private String number;
 
     private double latitude;
 
     private double longitude;
 
-    private String number;
+
 
 
 }
