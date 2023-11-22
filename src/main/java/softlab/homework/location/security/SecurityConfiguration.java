@@ -29,7 +29,7 @@ public class SecurityConfiguration {
         // @formatter:off
         http
                 .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("api/users").permitAll()
+                        .requestMatchers("users").permitAll()
                         .anyRequest().authenticated()
                 )
                 .httpBasic(withDefaults())

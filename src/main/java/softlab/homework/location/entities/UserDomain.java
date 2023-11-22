@@ -1,39 +1,48 @@
 package softlab.homework.location.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
 
-@Data
+@Setter
+@Getter
 @Entity
 @Table(schema = "public", name = "users")
 public class UserDomain implements UserDetails {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq_generator")
+    @SequenceGenerator(name = "users_seq_generator", sequenceName = "users_id_seq",allocationSize = 1)
     private Integer id;
+
 
     @Column(name = "email")
     private String username;
 
+    @Column(name = "password")
     private String password;
 
+
+    @Column(name = "first_name")
     private String firstName;
 
+    @Column(name = "last_name")
     private  String lastName;
 
+
+    @Column(name = "active")
     private Boolean active;
 
+
+    @Column(name = "created_at")
     private LocalDateTime createdAt;
 
 
