@@ -25,9 +25,6 @@ public class VehiclesController {
         return vehiclesService.search(vehicleId, vehicleNumber, vehicleType);
     }
 
-    /*@GetMapping("searchByNumber")
-    public List<Vehicles>searchByVehicleNumber(String vehicleNumber){
-        return vehiclesService.findByVehicleNumber(vehicleNumber);
-    }*/
+
 
 }
