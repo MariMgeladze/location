@@ -30,46 +30,12 @@ public class UserServiceImpl implements UserService{
         userRepository.save(userDomain);
     }
 
-       /*  public UserDomain userAdd(UserDomain users) {
-          users.setUsername(users.getUsername());
-          users.setPassword(users.getPassword());
-          users.setFirstName(users.getFirstName());
-          users.setLastName(users.getLastName());
-          users.setPassword(users.getPassword());
-          users.setActive(users.getActive());
-          users.setActive(true);
-          users.setCreatedAt(LocalDateTime.now());
-          return userRepository.save(users);
-      }
-*/
-   /* @Override
-    public UserDomain userAdd(Integer id, String userName, String password, String firstName, String lastName) {
-
-        return userRepository.findAll(userAdd());
-    }*/
-
-
-   /* @Override
-    public UserDomain userAdd(Integer id, UserCreateModel userCreateModel) {
-        return null;
-    }*/
 
     @Override
     public List<UserDomain> search(Integer id, String userName, String firstName) {
           return userRepository.findAll();//ყველა მონაცემის გამოტანა
     }
 
-    @Override
-    public void createNewUser(UserCreateModel userCreateModel) {
-
-    }
-
-
-
-   /* @Override
-    public UserDomain addUser(UserDomain userDomain) {
-        return (UserDomain) userRepository.findAll();
-    }*/
 
 
     /*@Override

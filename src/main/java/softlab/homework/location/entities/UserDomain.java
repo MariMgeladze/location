@@ -1,7 +1,6 @@
 package softlab.homework.location.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
@@ -20,7 +19,7 @@ public class UserDomain implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq_generator")
-    @SequenceGenerator(name = "users_seq_generator", sequenceName = "users_id_seq",allocationSize = 1)
+    @SequenceGenerator(name = "users_seq_generator", sequenceName = "users_id_seq", allocationSize = 1)
     private Integer id;
 
 
@@ -35,7 +34,7 @@ public class UserDomain implements UserDetails {
     private String firstName;
 
     @Column(name = "last_name")
-    private  String lastName;
+    private String lastName;
 
 
     @Column(name = "active")
@@ -53,21 +52,21 @@ public class UserDomain implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return Objects.equals(active,Boolean.TRUE);
+        return Objects.equals(active, Boolean.TRUE);
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return Objects.equals(active,Boolean.TRUE);
+        return Objects.equals(active, Boolean.TRUE);
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return Objects.equals(active,Boolean.TRUE);
+        return Objects.equals(active, Boolean.TRUE);
     }
 
     @Override
     public boolean isEnabled() {
-        return Objects.equals(active,Boolean.TRUE);
+        return Objects.equals(active, Boolean.TRUE);
     }
 }

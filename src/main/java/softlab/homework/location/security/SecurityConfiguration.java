@@ -21,9 +21,10 @@ public class SecurityConfiguration {
 
 
     @Bean
-    public PasswordEncoder getPasswordEncoder(){
+    public PasswordEncoder getPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         // @formatter:off
@@ -39,6 +40,7 @@ public class SecurityConfiguration {
         return http.build();
 
     }
+
     // @formatter:off
     @Bean
     public UserManager userDetailsService() {
